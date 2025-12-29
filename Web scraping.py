@@ -128,7 +128,7 @@ def scrape_website(url):
         return {'error': f'An error occurred: {str(e)}'}
 
 
-def save_to_file(data, base_filename='azcelladigital_scraped'):
+def save_to_file(data, base_filename='(given name)_scraped'):
     """
     Saves ALL scraped data to both JSON and Excel (XLSX) files
 
@@ -210,13 +210,13 @@ def save_to_file(data, base_filename='azcelladigital_scraped'):
 
 def main():
     """
-    Main function that scrapes azcelladigital.com with NO LIMITS
+    Main function that scrapes (website link provided in the prompt) with NO LIMITS
     """
-    # URL is hardcoded - azcelladigital.com
-    url = "https://azcelladigital.com/"
+    # URL is hardcoded - (website link provided in the prompt)
+    url = "(website link provided in the prompt)"
 
     print("=" * 60)
-    print("UNLIMITED WEB SCRAPER - AZCELLADIGITAL.COM")
+    print("UNLIMITED WEB SCRAPER - (website link provided in the prompt)")
     print("=" * 60)
     print(f"\nTarget URL: {url}")
     print("Scraping ALL content with NO LIMITS...")
@@ -235,8 +235,8 @@ def main():
     print("SCRAPING COMPLETED SUCCESSFULLY!")
     print("=" * 60)
 
-    print(f"\n📄 Title: {result['title']}")
-    print(f"📅 Scraped on: {result['scrape_date']}")
+    print(f"\n Title: {result['title']}")
+    print(f" Scraped on: {result['scrape_date']}")
 
     print("\n" + "-" * 60)
     print("STATISTICS:")
@@ -260,7 +260,7 @@ def main():
 
     save_to_file(result)
 
-    print("\n✅ Scraping and saving complete!")
+    print("\n Scraping and saving complete!")
     print("\nFiles created:")
     print("  1. JSON file - Contains ALL raw data")
     print("  2. XLSX file - Contains organized data in multiple sheets")
